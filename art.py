@@ -20,6 +20,7 @@ for i in cards_folder:
         majors_folder = os.listdir(".\\cards\\majors")
         for i in range(len(majors_folder)):
             img = Image.open(f".\\cards\\majors\\{majors_folder[i]}")
+            # i gotta rethink this probably
             major_img = {"name": majors_folder[i], "value": int(majors_folder[i].strip(".png")), "img": img.filename}
             print(major_img)
     #minor cards
@@ -49,7 +50,7 @@ for i in cards_folder:
             pentacles_img = {"name": pentacles_folder[i], "value": pentacles_folder[i].strip(".png"), "img": img.filename}
             print(pentacles_img)
     else:
-        print("Ohh lala")
+        print(":(")
 
 def img_convert():
     convert = AsciiArt.from_image(f".\\cards\\pentacles\\{pentacles_folder[i]}")
